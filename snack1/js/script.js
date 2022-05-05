@@ -7,13 +7,14 @@ const secondArray = [2, 4, 3]
 console.log("Array 1",firstArray);
 console.log("Array 2",secondArray);
 
-
+let firstArrayLenght = firstArray.length
+let secondArrayLenght = secondArray.length
+if(secondArray != firstArray) {
 //aggiungo elementi al secondo array fino ad arrivare allo stesso numero di elementi del primo
-while (secondArray.length < 9) {
+ while (secondArray.length < 9) {
     let randomNumber = Math.floor(Math.random() * 10) + 1;
-   
-   
-   secondArray.push(randomNumber)
-   
+    secondArray.push(randomNumber)
 }
+}
+
 console.log("array 2 fine",secondArray);
