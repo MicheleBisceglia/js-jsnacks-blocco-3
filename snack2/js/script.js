@@ -5,19 +5,18 @@
 //Creo un array vuoto
 const array = []
 console.log(array);
+let sum = 0
 
 
 while (sum < 50) {
-    const numberRequest = parseInt(prompt("Inserisci un numero da 1 a 10!")) 
-    console.log(numberRequest);
-    array.push(numberRequest) ;
+    const userNumber = parseInt(prompt("Inserisci un numero da 1 a 10!")) 
+    console.log(userNumber);
+    array.push(userNumber) ;
     console.log(array);
-    const sum = 0;
-    console.log(sum);
-    for (let i = 0; i < array.length; i++) {
-     sum += array[i];  
+    sum += userNumber;
+
 }
-}
+console.log("somma",sum);
 
 
 //Chiedo un numero all'utente
