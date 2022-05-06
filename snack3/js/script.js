@@ -6,8 +6,8 @@
 const superlegaTeam = [
     {
     nome:"juventus",
-    punti :"0",
-    falliSubiti : "0"
+    punti :"",
+    falliSubiti : ""
     }, 
     {
     nome:"Real Madrid",
@@ -29,17 +29,23 @@ const superlegaTeam = [
         punti :"0",
         falliSubiti : "0"
     }
-]
+];
+
+//scorro l'array di oggetti
+superlegaTeam.forEach( team => {
+//calcolo punti e falli con una funzione
+  const randomPunti = getRndInteger(0,100);
+  const randomFalli = getRndInteger(0,100);
+
+//inserisco i punti e i falli calcolati con la funzione nell'array
+  team.puntiFatti = randomPunti;
+  team.falliSubiti = randomFalli;
+});
+
 console.log(superlegaTeam);
 
-//Genero il numero di punti
-const randomPoints = createRndNumber(1, 100)
-console.log("punti",randomPoints);
-
-//Genero il numero di falli subiti
-const randomFouls = createRndNumber(1,20)
-console.log("falli",randomFouls);
-
-function createRndNumber(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + 1;
-  }
+//Functions (calcolo numeri random per falli e punti)
+function getRndInteger(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) ) + min;
+}
+  
